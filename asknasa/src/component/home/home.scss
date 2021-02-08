@@ -1,0 +1,48 @@
+*,
+*::before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+.home-wrapper {
+	margin: 30px;	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+
+	h1 {
+		color: #ffffffcc;
+	}
+
+
+	input {
+		margin: 10px;
+		width: auto;
+		height: auto;
+		border-radius: 5px;
+		background-color: darkblue;
+		color: #ffffffcc;
+	}
+
+	.image-text-wrapper {
+		margin: 20px;
+		display: flex;
+		align-items: flex-start;
+
+		img {
+			width: 50%;
+			height: 50%;
+		}
+
+		p {
+			padding: 0 5px 5px 15px;
+			text-align: justify;
+			color: #ffffffcc;
+		}
+	}
+}

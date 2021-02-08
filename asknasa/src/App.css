@@ -1,0 +1,18 @@
+*,
+*::before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-image: -webkit-gradient(linear, right top, left top, from(#2d2d5a), to(#5050a8));
+  background-image: linear-gradient(270deg, #2d2d5a, #5050a8);
+}
+
+.App {
+  padding: 20px;
+}
+/*# sourceMappingURL=App.css.map */
