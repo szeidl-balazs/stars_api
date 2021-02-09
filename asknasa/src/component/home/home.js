@@ -1,5 +1,6 @@
 import './home.css';
 import React, { useState, useEffect } from 'react';
+import Input from '../input/input';
 
 function Home() {
   
@@ -22,25 +23,28 @@ function Home() {
           setError(error);
         }
       )
-  }, [])
+  }, [inputDate])
 
 
-const datePicker = (e) => {
-  setInputDate(`https://apod.nasa.gov/apod/ap${e.target.value.replace(/-/g,'').slice(2)}.html`); /*g az összes előfordulást, i case insensitive*/
-}
-
+  const datePicker = (e) => {
+    setInputDate(`https://api.nasa.gov/planetary/apod?api_key=OWN7eFiECp6rBfvTqLLzCRaMmatwj1uWPhI59fmK&date=${e.target.value}`); /*g az összes előfordulást, i case insensitive*/
+    
+  }
+  console.log(inputDate);
   
   if (error) {
     return <div>Error: {error.message}</div>; /*ha error van visszatér error üzenettel*/
   } else if (!isLoaded) {
     return <div>Loading...</div>; /*vagy visszatér loading üzenettel*/
   } else {
+
+
     return (
       <div className='home-wrapper'>
         <h1>{items.title}</h1>
         <input type="date" onInput={datePicker}></input>
         <div className='image-text-wrapper'>
-          <img src={items.url} alt={items.title}></img>
+          <Input title={items.title} url={items.url} image={items.media_type} />
           <p>{items.explanation}</p>
         </div>
       </div>
