@@ -7,7 +7,7 @@ function Home() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
-  const [inputDate, setInputDate] = useState("https://api.nasa.gov/planetary/apod?api_key=OWN7eFiECp6rBfvTqLLzCRaMmatwj1uWPhI59fmK");
+  const [inputDate, setInputDate] = useState("https://api.nasa.gov/planetary/apod?api_key=xxx");
 
   
   useEffect(() => {
